@@ -1,6 +1,4 @@
-//
-
-#include <iostream>
+ #include <iostream>
 using namespace std;
 #ifndef FloatList_H
 #define FloatList_H
@@ -42,7 +40,7 @@ FloatList<T>::~FloatList(void)   // destructor
     while (nodePtr != NULL)
     {
         nextNode = nodePtr->next;
-        delete nodePtr;		
+        delete nodePtr;		 
         nodePtr = nextNode;	
         
     }
@@ -141,36 +139,6 @@ bool FloatList<T>::hasCycle() // hasCycle function
 
 // main function and test cases
 
-int main(void)
-{
-    FloatList<int> list;
-    list.insertNode(0, 2);
-    list.insertNode(1, 7);
-    list.insertNode(2, 12);
-    list.insertNode(3, 10);
-    list.insertNode(0, 5);
-    list.displayList();
-    cout << "Has cycle: " << list.hasCycle() << endl;
-
-
-    // a test case where there is a cycle
-    cout << "Test case where there is a cycle" << endl;
-
-    FloatList<float> cycledlist;
-    cycledlist.insertNode(0, 2.5);
-    cycledlist.insertNode(1, 7.9);
-    cycledlist.insertNode(2, 12.6);
-    cycledlist.displayList(); // display the list with out a cycle 
-    cycledlist.createCycle();
-    cout << "Has cycle: " << cycledlist.hasCycle() << endl;
-    
-
-
-
-    
-    
-    return 0;
-}
 
 
 

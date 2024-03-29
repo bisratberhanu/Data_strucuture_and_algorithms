@@ -166,32 +166,30 @@ void LinkedList<T>::addNodeFront(T num)
     }
 }
 
-class Stack : LinkedList<double> {
-public:
-	Stack() {}	// constructor
-	~Stack() {}	// destructor
-	double Top() { 
-		if (head == NULL) {
-			cout << "Error: the stack is empty." << endl;
-			return -1;
-		}
-		else
-			return head->value;
-	}
-	void Push(const double x) {addNodeFront(x); }
-	double Pop() { 
-		if (head == NULL) {
-			cout << "Error: the stack is empty." << endl;
-			return -1;
-		}
-		else {
-			double val = head->value;
-			deleteNode(val);
-			return val;
-		}
-	}
-	void DisplayStack() { displayList(); }
+
+
+// class Stack
+class Stack : LinkedList<double>
+{
+    public:
+    Stack() {};
+    void Push(double num)
+    {
+        addNodeFront(num);
+    }
+    void Pop()
+    {
+        deleteNode(head->value);
+    }
+    void DisplayStack()
+    {
+        displayList();
+    }
 };
+
+
+
+
 
 
 

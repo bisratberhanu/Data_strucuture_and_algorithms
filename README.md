@@ -1,10 +1,16 @@
 # Data Structures in C++
 
-This repository contains implementations of common data structures in C++. It includes the following data structures:
+- This repository contains implementations of common data structures in C++. 
+
+- they contain a main cpp file that shows how to use the data structure and a header file that contains the implementation of the data structure.
+- run the main cpp file to see the data structure in action.
+## Data Structures
+
 
 - Stack
 - Queue
 - Linked List
+
 
 ## Getting Started
 
